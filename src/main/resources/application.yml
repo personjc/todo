@@ -1,0 +1,10 @@
+app:
+    datasource:
+        #docker-machine ip default = ip address below
+        jdbc-url: jdbc:postgresql://192.168.99.101:5432/todo
+        username: postgres
+        password: password
+        pool-size: 30
+
+server:
+    port: 8085
