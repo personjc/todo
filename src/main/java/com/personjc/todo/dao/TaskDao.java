@@ -13,7 +13,7 @@ public interface TaskDao {
 
     int updateTask(String description, UUID taskId);
 
-    List<Task> retrieveAllTasks();
+    List<Task> getAllTasks();
 
     int completeTask(UUID taskId);
 }

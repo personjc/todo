@@ -24,7 +24,7 @@ public class TaskService {
     }
 
     public List<Task> getAllTasks() {
-        return taskDao.retrieveAllTasks();
+        return taskDao.getAllTasks();
     }
 
 //    public Optional<Task> getTaskById(UUID id) {return taskDao.}

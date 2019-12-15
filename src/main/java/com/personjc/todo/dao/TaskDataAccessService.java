@@ -37,8 +37,16 @@ public class TaskDataAccessService implements TaskDao{
     }
 
     @Override
-    public List<Task> retrieveAllTasks() {
-        return null;
+    public List<Task> getAllTasks() {
+        String sql = "SELECT " + UUID_COLUMN + ", " + DESC_COLUMN + " FROM TODO;";
+
+        List<Task> tasks = jdbcTemplate.query(sql, (resultSet, i) -> {
+            UUID id = UUID.fromString(resultSet.getString("taskid"));
+            String description = resultSet.getString("description");
+            return new Task(id, description);
+        });
+
+        return tasks;
     }
 
     @Override

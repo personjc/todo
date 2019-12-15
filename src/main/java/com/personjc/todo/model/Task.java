@@ -14,6 +14,11 @@ public class Task {
         this.description = description;
     }
 
+    public Task (@JsonProperty("taskId") UUID taskId, @JsonProperty("description") String description){
+        this.description = description;
+        this.id = taskId;
+    }
+
     public UUID getId() {
         return id;
     }
