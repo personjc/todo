@@ -1,5 +1,7 @@
 package com.personjc.todo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.UUID;
 
 public class Task {
@@ -7,6 +9,10 @@ public class Task {
     private UUID id;
     private String description;
     private boolean complete;
+
+    public Task (@JsonProperty("description") String description){
+        this.description = description;
+    }
 
     public UUID getId() {
         return id;
