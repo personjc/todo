@@ -5,19 +5,15 @@ import com.personjc.todo.model.Task;
 import java.util.List;
 import java.util.UUID;
 
-public interface TaskDao extends CrudDao {
+public interface TaskDao {
 
-    @Override
-    void add(String description);
+    int addTask(Task task);
 
-    @Override
-    void delete(UUID taskId);
+    int deleteTask(UUID taskId);
 
-    @Override
-    void update(String description, UUID taskId);
+    int updateTask(String description, UUID taskId);
 
-    @Override
-    List<Task> retrieveAll();
+    List<Task> retrieveAllTasks();
 
-    void completeTask(UUID taskId);
+    int completeTask(UUID taskId);
 }

@@ -1,0 +1,5 @@
+CREATE TABLE todo(
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    taskId UUID NOT NULL,
+    description VARCHAR(200) NOT NULL
+);
